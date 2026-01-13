@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" class="dark"> <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deri Resdiana | Game Programmer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Configuration for Tailwind
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            neoYellow: '#ffff00',
+            neoBlue: '#38bdf8',
+          }
+        }
+      }
+    }
+
+    // Toggle Function
+    function toggleMode() {
+      document.documentElement.classList.toggle('dark');
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer components {
+      .neo-border { @apply border-4 border-black; }
+      .neo-shadow { box-shadow: 4px 4px 0px 0px rgba(0,0,0,1); }
+      
+      /* Dark mode specific shadows - white or colored for contrast */
+      .dark .neo-shadow { box-shadow: 4px 4px 0px 0px rgba(255,255,0,1); }
+      .dark .neo-border { @apply border-4 border-neoYellow; }
+    }
+    body { @apply transition-colors duration-300; }
+  </style>
+</head>
+<body class="bg-white dark:bg-[#111] text-black dark:text-white p-4 md:p-8">
+
+  <div class="fixed top-4 right-4 z-50">
+    <button onclick="toggleMode()" class="neo-border bg-neoYellow dark:bg-white text-black px-4 py-2 font-black uppercase neo-shadow hover:translate-y-[-2px] active:translate-y-[2px] transition-all">
+      🌓 Toggle Mode
+    </button>
+  </div>
+
+  <header class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center min-h-[60vh] neo-border bg-white dark:bg-[#1a1a1a] neo-shadow p-8 mb-12">
+    <div class="flex flex-col justify-center border-b-4 md:border-b-0 md:border-r-4 border-black dark:border-neoYellow pb-8 md:pb-0 md:pr-8 h-full">
+      <h1 class="text-6xl md:text-7xl font-black uppercase leading-none mb-6">
+        Deri<br>Resdiana
+      </h1>
+      <a href="https://linkedin.com/in/YOUR_USERNAME" target="_blank"
+         class="inline-block w-fit px-8 py-4 bg-neoYellow text-black border-4 border-black font-bold uppercase text-lg neo-shadow hover:translate-x-[2px] transition-all">
+        LinkedIn Profile
+      </a>
+    </div>
+
+    <div class="flex flex-col justify-center h-full">
+      <h2 class="text-2xl md:text-3xl font-black uppercase mb-4 text-neoBlue">
+        Game Programmer | C++ | Unity | Mobile
+      </h2>
+      <p class="text-xl font-bold leading-relaxed mb-6 opacity-90">
+        Passionate about building robust game systems. When I'm not coding, 
+        I'm a dedicated <span class="bg-neoYellow text-black px-1 italic">gamer</span>—usually lost in 
+        Action-Adventure titles or grinding through JRPGs.
+      </p>
+    </div>
+  </header>
+
+  <main id="projects" class="max-w-6xl mx-auto py-12">
+    <h2 class="text-4xl font-black uppercase mb-12 inline-block bg-black dark:bg-neoYellow text-white dark:text-black px-6 py-2 neo-shadow">
+      Personal Projects
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <section class="neo-border bg-white dark:bg-[#1a1a1a] p-6 neo-shadow">
+        <h3 class="text-3xl font-black uppercase mb-2">Wordlelatro</h3>
+        <p class="font-bold mb-4 opacity-80">Wordle with a Balatro twist. Strategic word-guessing with roguelike mechanics.</p>
+        <a href="https://driexyz.github.io/Wordlelatro/" target="_blank" class="text-neoBlue font-black underline decoration-2">LIVE SITE →</a>
+        <div class="grid grid-cols-2 gap-4 mt-6">
+          <img src="opa1.png" class="neo-border" alt="Wordlelatro">
+          <img src="opa2.png" class="neo-border" alt="Balatro">
+        </div>
+      </section>
+
+      <section class="neo-border bg-white dark:bg-[#1a1a1a] p-6 neo-shadow">
+        <h3 class="text-3xl font-black uppercase mb-2">Oppa Board Game</h3>
+        <p class="font-bold mb-4 opacity-80">Digital board game for waste management system maps. Interactive web gameplay.</p>
+        <a href="https://oppaboardgame.web.app/" target="_blank" class="text-neoBlue font-black underline decoration-2">LIVE SITE →</a>
+        <div class="grid grid-cols-2 gap-4 mt-6">
+          <img src="https://via.placeholder.com/400x300/111/38bdf8?text=Oppa+Board" class="neo-border" alt="Oppa 1">
+          <img src="https://via.placeholder.com/400x300/111/38bdf8?text=Waste+Map" class="neo-border" alt="Oppa 2">
+        </div>
+      </section>
+    </div>
+
+    <section class="neo-border bg-white dark:bg-[#1a1a1a] p-8 neo-shadow mt-12">
+      <div class="md:flex justify-between items-center mb-6">
+        <div>
+          <h3 class="text-4xl font-black uppercase">FLP Academy</h3>
+          <p class="font-bold opacity-80 max-w-xl">Monthly quiz platform for FLP Astra People. Cross-platform mobile development for iOS & Android.</p>
+        </div>
+        <span class="mt-4 md:mt-0 inline-block bg-black dark:bg-neoYellow text-white dark:text-black px-4 py-2 font-bold uppercase">Mobile App</span>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <img src="https://via.placeholder.com/500x300/111/ffff00?text=Quiz+UI" class="neo-border" alt="FLP 1">
+        <img src="https://via.placeholder.com/500x300/111/ffff00?text=Mobile+App" class="neo-border" alt="FLP 2">
+        <img src="https://via.placeholder.com/500x300/111/ffff00?text=Astra+People" class="neo-border" alt="FLP 3">
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center font-black py-8 uppercase">
+    Deri Resdiana &bull; 2026
+  </footer>
+
+</body>
+</html>
